@@ -8,6 +8,26 @@ description: Clonar a voz do João (ou de qualquer pessoa com gravações própr
 O clone não melhora com prompt nem com pós-processamento. Ele melhora com **referência certa** e
 **escolha por medida**. Esta skill é o laboratório que provou isso e o caminho de produção que sai dele.
 
+## CORREÇÃO (23/10/2026): a régua abaixo media o alvo errado
+
+O João ouviu os dois clones: o **antigo "ficou idêntico à minha voz"; o novo "nada a ver"**. A tabela abaixo dava o
+contrário (0,78 contra 0,91) porque a régua comparava com os **memos de voz de celular**, e a voz que o público
+conhece é a dos **vídeos** dele. Medido contra os áudios dos vídeos (14 janelas de 8 s):
+
+| clone | contra a voz dos vídeos | contra os memos |
+|---|---|---|
+| antigo (referência de 9,2 s tirada de áudio de vídeo dele, preset `broadcast`, 16 passos) | **0,916** | 0,782 |
+| novo (16 s de memos, preset `raw`, 32 passos) | 0,801 | 0,915 |
+
+Regras que valem a partir daqui:
+1. **O alvo da régua é a voz como o público ouve** (áudio dos vídeos publicados), nunca memo de celular.
+2. **A referência vem do mesmo tipo de áudio** em que o clone vai ser ouvido. Memo de celular tem outro timbre
+   de captação e o clone copia isso.
+3. **O ouvido do dono decide.** Antes de gastar tempo, ele escuta 2 versões às cegas. Número sozinho não aprova clone.
+4. O preset `raw` e as regras 1, 2, 3, 5 e 7 da lista mais abaixo **não foram validadas** pelo ouvido: tratar como
+   hipótese. O que comprovadamente funcionou é a receita do clone antigo (linha da tabela acima).
+5. Os números da tabela original ficam abaixo só como registro do erro.
+
 ## O que foi medido (22/10/2026, voz do João, 3 frases do reel do PDF)
 
 Régua: `sim` = semelhança de locutor (wespeaker) contra o centróide de 12 memos reais que não
